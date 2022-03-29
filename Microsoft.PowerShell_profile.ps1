@@ -32,7 +32,6 @@ if($randNum -eq 0) {
 	"                 ###@@@@	All systems nominal."
 	"                        	"
 	"                        	End of line."
-	"                        	"
 } else {
 	"	                                                          "
 	"	:::::::::: ::::    :::  ::::::::   ::::::::  ::::    :::: "
@@ -46,7 +45,6 @@ if($randNum -eq 0) {
 	"	   ### ### ### ### ##  ###  #  ### ###  #  ###  #  #  "
 	"	    #  # #  #  ##  ##  # # ###  #   #  # # # # ### #  "
 	"	   ### # #  #  ### # # # # # #  #  ###  #  # # # # ###"
-	"	                                                          "
 }
 
 function prompt {
@@ -61,8 +59,9 @@ function prompt {
   #   $curdir = $ExecutionContext.SessionState.Drive.Current.Name+":\"
   # }
 
+  Write-Host ""
   Write-Host ""$time" " -BackgroundColor Magenta -ForegroundColor White -NoNewLine
-  Write-Host ""$env:USERNAME"@"$env:COMPUTERNAME" " -BackgroundColor Cyan -ForegroundColor Black -NoNewLine
+  Write-Host ""$env:USERNAME"@"$env:COMPUTERNAME" " -BackgroundColor Cyan -ForegroundColor Black
   Write-Host " "$curdir" " -BackgroundColor Yellow -ForegroundColor Black
 
   " > "
