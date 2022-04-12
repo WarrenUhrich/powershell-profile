@@ -61,7 +61,10 @@ function prompt {
   $date = Get-Date
   $time = $date.GetDateTimeFormats()[77]
   # $curdir = $ExecutionContext.SessionState.Path.CurrentLocation.Path.Split("\")[-1]
+
   $curdir = $ExecutionContext.SessionState.Path.CurrentLocation.Path
+  $curdir = $curdir.replace($HOME, '~')
+  
   $branch= &git rev-parse --abbrev-ref HEAD 
 
   # if($curdir.Length -eq 0) {
